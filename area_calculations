@@ -1,0 +1,35 @@
+//*****************************************************************************************
+//                          CALCULATING AREA OF EACH CLUSTER                              
+//*****************************************************************************************
+
+// Calculate the area of each cluster.
+var cluster_area = ee.Image.pixelArea().divide(4046.85642).addBands(post_fire_clustered).reduceRegion({
+  reducer: ee.Reducer.sum().group(1),
+  geometry: area.geometry(),
+  scale: 256, //pre_fire.projection().nominalScale(),
+  maxPixels: 1e13,
+  tileScale: 16
+});
+
+print('Area of each cluster:', cluster_area);
+
+var features1 = ee.FeatureCollection(
+  ee.List(cluster_area.get('groups')).map(function(cluster){
+    var properties = ee.Dictionary(cluster);
+    var id = properties.get('group');
+    var area = ee.Number(properties.get('sum')).format('%.2f');
+    return ee.Feature(null, {id: id, area_acres: area});
+  })
+);
+
+// Convert the feature collection to a CSV file and export to Google Drive
+Export.table.toDrive({
+  collection: features1,
+  description: 'post_fire_clusters_area',
+  fileFormat: 'CSV'
+});
+
+var area1 = ee.Number(geometry.area(1)).divide(4046.85642);
+
+// Print the area
+print('Area in acres:', area1);
