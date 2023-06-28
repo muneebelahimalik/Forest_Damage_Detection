@@ -58,9 +58,9 @@ To get started with the forest damage detection system, follow these steps:
 ## Usage
 Here are some general usage guidelines:
 
-- Load and preprocess the satellite imagery data using the 'dataloader.js' script.
-- Analyze the satellite imagery using the 'image_analysis.js' script.
-- Preprocess the data before clustering using the 'pre_processor.js' script.
-- Calculate spectral indices using the 'spectral_indices.js' script.
-- Perform the classification tasks using the 'classifier.js' script, utilizing Random Forest Classifier.
+- Load and preprocess the satellite imagery data using the dataloader.js script.
+- Analyze the satellite imagery using the image_analysis.js script.
+- Preprocess the data before clustering using the pre_processor.js script.
+- Calculate spectral indices using the spectral_indices.js script.
+- Perform the classification tasks using the classifier.js script, utilizing Random Forest Classifier.
 - Please refer to the individual scripts for more detailed instructions and options for customization.
