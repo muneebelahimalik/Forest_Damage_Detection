@@ -32,7 +32,7 @@ The repository consists of the following files and directories:
   - `pre_processor.js`: Script for pre-processing steps.
   - `spectral_indices.js`: Script for calculating spectral indices.
   - `training.js`: Script for model training.
-  - 'clusterer.js': Script for applying Cascaded K-Means Clustering
+  - clusterer.js: Script for applying Cascaded K-Means Clustering
 - `README.md`: This file, providing an overview of the project and instructions for usage.
 
 ## Getting Started
