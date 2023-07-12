@@ -7,7 +7,7 @@ The code performs cascaded K-Means clustering on Sentinel-2B imagery and classif
 Our innovative approach combines unsupervised machine learning and remote sensing to overcome the challenge of limited ground truth data in forest fire detection and burn severity classification. By leveraging satellite remote sensing imagery (Sentinel 2-B) and avoiding costly sensor or drone deployment, we extract valuable insights from complex datasets without predefined labels. Using a supervised machine learning model trained with spectral indices, we classify the clusters into 7 burn severity classes. The burnt area is then calculated and compared to ground truth data for validation purposes.
 
 ![Picture](https://github.com/muneebelahimalik/Forest_Damage_Detection/assets/59524535/7dce221c-b4fe-4293-8851-b17ac75b5750)
-
+ 
 
 ## Requirements
 
